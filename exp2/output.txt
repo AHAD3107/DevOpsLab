@@ -1,0 +1,37 @@
+Experiment No. 2 – Sample Application Development
+
+Output:
+
+abdul@ABLOQ:~/Devops/exp2$ cd D:\Devops\exp2
+-bash: cd: D:Devopsexp2: No such file or directory
+
+abdul@ABLOQ:~/Devops/exp2$ cd /mnt/d/Devops/exp2
+
+abdul@ABLOQ:/mnt/d/Devops/exp2$ python3 grade_calculator.py
+Enter Student Name: Abdul
+Enter Marks: 88
+
+Student Name: Abdul
+Marks: 88.0
+Grade: A
+abdul@ABLOQ:/mnt/d/Devops/exp2$ python3 grade_calculator.py
+Enter Student Name: Sujal
+Enter Marks: 90
+
+Student Name: Sujal
+Marks: 90.0
+Grade: A+
+abdul@ABLOQ:/mnt/d/Devops/exp2$ python3 grade_calculator.py
+Enter Student Name: Umar
+Enter Marks: 65
+
+Student Name: Umar
+Marks: 65.0
+Grade: C
+abdul@ABLOQ:/mnt/d/Devops/exp2$ python3 grade_calculator.py
+Enter Student Name: ABD
+Enter Marks: 70
+
+Student Name: ABD
+Marks: 70.0
+Grade: B

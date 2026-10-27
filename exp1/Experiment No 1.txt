@@ -1,0 +1,62 @@
+Experiment No 1 Introduction to Linux Commands
+
+Aim 
+To study and practice basic Linux commands for file and directory operations, user management, and 
+permission management.
+
+Performed Experiment:
+
+abdul@ABLOQ:/mnt/d/Devops/exp1$ touch sample.txt
+abdul@ABLOQ:/mnt/d/Devops/exp1$ echo "Linux Command Practice" > sample.txt
+cat sample.txt
+Linux Command Practice
+abdul@ABLOQ:/mnt/d/Devops/exp1$ cp sample.txt backup.txt
+ls
+backup.txt  sample.txt
+abdul@ABLOQ:/mnt/d/Devops/exp1$ mv sample.txt file1.txt
+ls
+backup.txt  file1.txt
+abdul@ABLOQ:/mnt/d/Devops/exp1$ rm file1.txt
+ls
+backup.txt
+abdul@ABLOQ:/mnt/d/Devops/exp1$ mkdir TestFolder
+abdul@ABLOQ:/mnt/d/Devops/exp1$ rmdir TestFolder
+abdul@ABLOQ:/mnt/d/Devops/exp1$ whoami
+abdul
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo useradd student1
+[sudo: authenticate] Password:     
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo useradd student1
+useradd: user 'student1' already exists
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo passwd student1
+New password: 
+Retype new password: 
+passwd: password updated successfully
+abdul@ABLOQ:/mnt/d/Devops/exp1$ id student1
+uid=1001(student1) gid=1002(student1) groups=1002(student1)
+abdul@ABLOQ:/mnt/d/Devops/exp1$ su student1
+whoami
+Password: 
+$ exit
+abdul
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo userdel student1
+userdel: user student1 is currently used by process 856
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo pkill -9 -u student1
+sudo userdel student1
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo userdel student1
+userdel: user 'student1' does not exist
+abdul@ABLOQ:/mnt/d/Devops/exp1$ touch sample.sh
+ls -l sample.sh
+-rwxrwxrwx 1 abdul abdul 0 Oct 27 12:30 sample.sh
+abdul@ABLOQ:/mnt/d/Devops/exp1$ chmod +x sample.sh
+ls -l sample.sh
+-rwxrwxrwx 1 abdul abdul 0 Oct 27 12:30 sample.sh
+abdul@ABLOQ:/mnt/d/Devops/exp1$ chmod 755 sample.sh
+ls -l sample.sh
+-rwxrwxrwx 1 abdul abdul 0 Oct 27 12:30 sample.sh
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo useradd student1
+sudo chown student1 sample.sh
+ls -l sample.sh
+-rwxrwxrwx 1 abdul abdul 0 Oct 27 12:30 sample.sh
+abdul@ABLOQ:/mnt/d/Devops/exp1$ sudo chown $(whoami) sample.sh
+sudo userdel student1
+abdul@ABLOQ:/mnt/d/Devops/exp1$ 
